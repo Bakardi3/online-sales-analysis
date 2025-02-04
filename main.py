@@ -1,14 +1,21 @@
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 #kreiranje instance
 manager = ProductManager()
+cart = Cart()
 
 #dodavanje proizvoda
-manager.add_products(ProductManager("TV", 1000, 10))
+manager.add_products(ProductManager("TV", 1000, 6))
 manager.add_products(ProductManager("Laptop", 600, 10))
-manager.add_products(ProductManager("Phone", 350, 7))
+manager.add_products(ProductManager("Phone", 350, 15))
 
+#lista proizvoda
+print("List of product:")
+manager.display_products()
 
+#ukupna vrednost
+print(f"Total sum:{manager.total_value()}")
 
 
